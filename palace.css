@@ -1,0 +1,233 @@
+body{
+    background-image:url(casino.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:top;
+    color:#fefefe;
+}
+
+#header{
+    text-align:center;
+    position:absolute;
+    width:100%;
+    margin:0 auto;
+}
+
+.activeInstruction{
+    display:initial;
+    transition: 1s;
+}
+
+#rulebuttons{
+    position:absolute;
+    top:100px;
+}
+
+#game{
+    height:100%;
+    width:100%;
+}
+
+.hidden{
+    display:none;
+}
+
+.start{
+    display:none;
+}
+
+.card{
+    height:100px;
+    width:80px;
+    display:inline-block;
+    margin: 10px 10px 0px 10px;
+}
+
+.card p{
+    text-align:center;
+    position:absolute;
+    top:20px;
+    visibility:hidden;
+}
+
+a{
+    outline:#eeeeee solid 2px;
+    font-size:15px;
+    margin: 5px;
+    padding: 2px 5px;
+}
+
+.selected{
+    opacity:.55;
+    
+}
+
+.facedown{
+    visibility:hidden; 
+}
+
+#header h1,h2 {
+    margin:0 auto;
+}
+
+#welcome p{
+    margin:initial;
+    width:70%;
+}
+
+#begin{
+    display:none;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.active{
+    position:absolute;
+    top:10%;
+}
+
+p{
+    font-size:15px;
+}
+
+#pile {
+    outline: #eeeeee dotted 2px;
+    height:100px;
+    width:80px;
+    position:absolute;
+    top:20%;
+    right:50%;
+}
+
+#pile .card{
+    margin:0;
+}
+
+#deck {
+    outline: #eeeeee dotted 1px;
+    height:100px;
+    width:80px;
+    position:absolute;
+    top:50%;
+    right:50%;
+}
+
+#player{
+    position:absolute;
+    top:5%;
+    width:300px;
+    height:100%;
+}
+
+#cpu {
+    position:absolute;
+    width:400px;
+    top:5%;
+    left:65%;
+    height:100%;
+}
+
+.faceupdown{
+    position:absolute;
+    top: 300px;
+    z-index:-1;
+}
+
+.faceup{
+    position:absolute;
+    width:300px;
+    top:80px;
+    z-index:2;
+}
+
+#deck *{
+    margin:5px;
+    text-align:center;
+    font-size:15px;
+}
+
+#playerhand .card, #cpuhand .card{
+    margin-bottom:-50px;
+}
+
+#startmsg{
+    margin:5px;
+    position:absolute;
+    top:-15px;
+}
+
+#chooseThree{
+    position:absolute;
+    top:-20px;
+}
+    
+p, h3, h4{
+    margin: 5px auto;
+}
+
+.result{
+    position:absolute;
+    top:40%;
+    height:100%;
+    width:100%;
+    text-align:center;
+}
+
+.result h1{
+    font-size:100px;
+    font-family: "Comic Sans MS", "cursive", "sans-serif";
+    width: 100%;
+    position:absolute;
+    margin: 0 auto;
+}
+
+#cpuplayed{
+    position:absolute;
+    top:10%;
+    left:40%;
+}
+
+#cpuplayed h3{
+    display: inline-block;
+}
+
+/*make cards unable to be highlighted after double click*/
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hand {
+    z-index:3;
+}
+
+.bottomthree{
+    position:absolute;
+    width:300px;
+    top:110px;
+    z-index:1;
+}
+
+#playagain{
+    z-index:1;
+    position:absolute;
+    background-color:#eeeeee;
+    top:20%;
+    color:black;
+    right:48%
+}
+
+#bomb{
+    position:absolute;
+    width:100px;
+    height:100px;
+    right:50%;
+    top:35%;
+    visibility:hidden;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Palace</title>
+        <link rel="stylesheet" type="text/css" href="palace.css">
+        <script
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="palace.js"></script>
+	</head>
+
+	<body>
+	<div id="header">
+		<h1>Welcome to Palace</h1>
+		<h2>The card game of champs</h2>
+	</div>
+
+	<div id="welcome" class="active">
+		<h2>Rules: </h2>
+		<div id="firstinstruction" class="activeInstruction"><p>
+		The objective of the game is to get rid of all your cards. The
+		players start with three facedown cards and six cards in their hand.
+		From those six cards, choose three cards (preferably the three "best"
+		cards, which will be defined later) and place them on top of the
+		facedown cards. </p></div>
+		
+		<div id="secondinstruction" class="hidden"><p>
+		In general, players must play a card(s) with a greater than or equal to
+		value than the previous card, on their turn. If they have multiple
+		cards of the same value (e.g. three Kings), then they can play any
+		number of them, provided it is a higher value than the previous card.
+		The higher value cards are the larger ones, from a low of 3 to a high of Ace,
+		except for the three wild cards: 2, 7, 10. </p> </div>
+
+		<div id="thirdinstruction" class="hidden"><p>
+		 2, 7, and 10 all can be played after
+		any previous card regardless of its value, and they have special
+		effects. The 2 allows the player to play another card, the 7 requires
+		the following player to play a card <em>lower</em> than 7, and the 10
+		is a "bomb", which discards all the cards in the current pile then
+		allows the player to play again. Also, four consecutive cards of the 
+		same value counts as a bomb </p> </div>
+
+		<div id="fourthinstruction" class="hidden"><p>
+		After playing a card, draw a card(s) from the deck until you
+		have at least 3 cards. If you cannot beat the current card, then you
+		must take all of the pile into your hand. After the entire deck has
+		been drawn and players have emptied their hands, they may use the three
+		face up cards they had chosen at the beginning. After those, players
+		must choose the facedown cards at random to play, and normal play
+		continues until someone uses up all their cards</p></div>
+		
+		<div id="rulebuttons">
+		<a id="next">Next</a> <a id="skip">Skip</a>
+        </div>
+	</div>
+
+	<div id="game" class="hidden" > <!--To line 189-->
+
+	<div id="chooseThree">
+		<h2>Pick three cards to be faceup:<h2>
+		<a id="startGame">Done</a>
+		<p id="pickAgain" class="hidden">Must pick exactly three cards</p>
+	</div>
+
+    <div id="startmsg" class="start">
+	<h3>You may begin! Pick a card to play</h3>
+    <p>Double-click a card or highlight and click "Select"</p>
+    </div>
+
+	<div id="player">
+
+	<h4 class="start">Your hand: </h4>
+    <div id="gamebuttons">
+	<a id="pickup" class="start">Pick up</a>
+    <a id="select" class="start">Select</a>
+    </div>
+	<div id="playerhand" class="hand cardholder"></div>
+
+	<div class="faceupdown">
+	<div id="playerfaceup" class="faceup cardholder"></div>
+	<div id="playerfacedown" class="bottomthree cardholder"></div>
+	</div>
+
+	</div>
+
+	<div id="cpu">
+
+	<h4 class="start">CPU hand: </h4>
+	<div id="cpuhand" class="hand cardholder"></div>
+
+	<div class="faceupdown">
+	<div id="cpufaceup" class="faceup cardholder"></div>
+	<div id="cpufacedown" class="bottomthree cardholder"></div>
+	</div>
+
+	</div>
+
+    <div id="cpuplayed" class="start">
+        <h3>CPU played: <h3 id="cpumove"></h3></h3>
+    </div>
+	<div id="pile" class="start cardholder"></div>
+    <img id="bomb" src="bomb.png">
+	<div id="deck" class="start">
+        <h4>Cards remaining: <span id="remainingCards"></span></h4>
+    </div>
+
+	</div>
+
+    <div class="result">
+    <h1 id="win" class="hidden">You Won!</h1>
+    <h1 id="lose" class="hidden">You Lost!</h1>
+    <a id="playagain" class="hidden">Play again?</a>
+    </div>
+
+	</body>
+
+</html>
