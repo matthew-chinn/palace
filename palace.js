@@ -569,14 +569,14 @@ var makeCard = function(array, divId, cardClass){
             //$(cardOutline).addClass(cardClass);
             $(cardImage).addClass("facedown");
         }
-        $(cardFacedown).attr("src", "classic-cards/card_back.png");
+        $(cardFacedown).attr("src", "palace/classic-cards/card_back.png");
         $(cardFacedown).css({
             width:"80px",
             height:"100px",
             zIndex:"1",
             position:"absolute"
         });
-        var imgName = "classic-cards/" + array[i] + ".png";
+        var imgName = "palace/classic-cards/" + array[i] + ".png";
         $(cardImage).attr("src", imgName);
         $(cardImage).css({
             width:"80px",
