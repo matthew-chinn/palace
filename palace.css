@@ -231,3 +231,8 @@ body{
     top:35%;
     visibility:hidden;
 }
+
+#cpuhand{
+    position:relative;
+    top: 20px;
+}
