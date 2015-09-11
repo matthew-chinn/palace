@@ -236,3 +236,7 @@ body{
     position:relative;
     top: 20px;
 }
+
+#playerflipped *{
+    display: inline-block;
+}

@@ -383,6 +383,9 @@ function playerDblClick(cardsrc, hand)
     $('#startmsg').fadeOut("500");
     var card = parseInt($(cardsrc).children("p").text());
     var cardValue= getCardValue(card);
+    if(hand === FACEDOWN){
+        $('#flipped').text(cardValue);
+    }
     if(pile.length === 0 || (compareTopCard(card) >= 0) )
     {
         $('.selected').removeClass("selected");
