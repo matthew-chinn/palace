@@ -52,7 +52,6 @@ var initializeGame = function(){
     
     var numSelected = 0;
     makeCard(playerHand, "playerhand");
-    $('*').off(); //reset all div event listeners for play again button
 
     $('.card').unbind("click").click(function(){
         if($(this).hasClass("selected"))
@@ -168,9 +167,10 @@ function playerTurn(){
         $('#playerfacedown').on('dblclick', '.card', function(){
             playerDblClick(this, FACEDOWN);
         });
-        if(playerFacedown.length === 0 && playerHand.length === 0)
-            winScreen();
     }
+
+    if(playerFacedown.length === 0 && playerHand.length === 0)
+        winScreen();
 
     $('#select').unbind("click").click(function(){
         if(cardsChosen.length > 0)
@@ -237,7 +237,7 @@ function cpuPlayCard(array)
         var i = 0;
         var card;
         var answers = [];
-		for(i; i < array.length; i++)
+		for(i = 0; i < array.length; i++)
 		{
             card= array[i];
 			if(pile.length === 0 || (compareTopCard(card) >= 0) )
@@ -384,7 +384,9 @@ function playerDblClick(cardsrc, hand)
     var card = parseInt($(cardsrc).children("p").text());
     var cardValue= getCardValue(card);
     if(hand === FACEDOWN){
+        $('#playerflipped').fadeIn();
         $('#flipped').text(cardValue);
+
     }
     if(pile.length === 0 || (compareTopCard(card) >= 0) )
     {
@@ -715,6 +717,9 @@ function resetAll(){
     playerFaceup = [];
     cpuFaceup = [];
     pile = [];
+    
+    $('*').off(); //reset all div event listeners for play again button
+
     $('.cardholder').empty(); //clear divs
     $('#bomb').css("visibility", "hidden");
     $('#cpumove').text("");
@@ -722,6 +727,11 @@ function resetAll(){
     $('#startGame').fadeIn("500");
     $('.start').css("display", "none");
     $('#playerhand').css("width", "300");
+
+    $('#lose').fadeOut("500");
+    $('#win').fadeOut("500");
+    $('#playagain').fadeOut("500");
+    $('#playerflipped').fadeOut();
 }
 
 

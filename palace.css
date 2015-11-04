@@ -240,3 +240,7 @@ body{
 #playerflipped *{
     display: inline-block;
 }
+
+#playerflipped {
+    display: none;
+}
